@@ -7,76 +7,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body{
-  background:#111;
-  color:#fff;
-  line-height:1.6;
-  scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#111;color:#fff;line-height:1.6;scroll-behavior:smooth;}
 
 header{
-  position:fixed;
-  width:100%;
+  position:fixed;width:100%;
   background:rgba(0,0,0,0.9);
   padding:20px 10%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  display:flex;justify-content:space-between;align-items:center;
   z-index:1000;
 }
 
-header h1{
-  font-size:22px;
-  font-weight:600;
-}
-
 nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:25px;
-  transition:.3s;
+  color:white;text-decoration:none;margin-left:25px;transition:.3s;
 }
-
-nav a:hover{
-  color:#e63946;
-}
+nav a:hover{color:#e63946;}
 
 .hero{
   height:100vh;
-  background:url('https://images.unsplash.com/photo-1555992336-03a23c1f5b9d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:0 20px;
+  background:url('https://source.unsplash.com/1600x900/?italian-restaurant,interior') center/cover no-repeat;
+  display:flex;justify-content:center;align-items:center;text-align:center;padding:0 20px;
 }
 
 .hero h2{
   font-size:48px;
   background:rgba(0,0,0,0.6);
-  padding:20px;
-  border-radius:10px;
+  padding:20px;border-radius:10px;
 }
 
-section{
-  padding:100px 10%;
-}
+section{padding:100px 10%;}
 
 .section-title{
-  text-align:center;
-  font-size:36px;
-  margin-bottom:50px;
-  color:#e63946;
+  text-align:center;font-size:36px;margin-bottom:50px;color:#e63946;
 }
 
-/* MENU */
 .menu-items{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -84,77 +48,39 @@ section{
 }
 
 .menu-item{
-  background:#1c1c1c;
-  padding:20px;
-  border-radius:12px;
-  transition:.3s;
-  text-align:center;
+  background:#1c1c1c;padding:20px;border-radius:12px;
+  transition:.3s;text-align:center;
 }
-
-.menu-item:hover{
-  transform:translateY(-6px);
-}
+.menu-item:hover{transform:translateY(-6px);}
 
 .menu-item img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-  border-radius:10px;
-  margin-bottom:15px;
+  width:100%;height:200px;object-fit:cover;
+  border-radius:10px;margin-bottom:15px;
 }
 
-.menu-item h3{
-  margin-bottom:8px;
-}
+.price{color:#e63946;font-weight:600;margin-top:8px;}
 
-.price{
-  color:#e63946;
-  font-weight:600;
-  margin-top:8px;
-}
-
-/* FORM */
 form{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-  max-width:500px;
-  margin:auto;
+  display:flex;flex-direction:column;gap:15px;
+  max-width:500px;margin:auto;
 }
 
 input, textarea{
-  padding:12px;
-  border:none;
-  border-radius:6px;
+  padding:12px;border:none;border-radius:6px;
 }
 
 button{
-  padding:12px;
-  background:#e63946;
-  border:none;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  border-radius:6px;
-  transition:.3s;
+  padding:12px;background:#e63946;border:none;color:white;
+  font-weight:600;cursor:pointer;border-radius:6px;transition:.3s;
 }
-
-button:hover{
-  background:#c92d3a;
-}
+button:hover{background:#c92d3a;}
 
 footer{
-  text-align:center;
-  padding:30px;
-  background:#000;
-  margin-top:50px;
-  font-size:14px;
+  text-align:center;padding:30px;background:#000;margin-top:50px;font-size:14px;
 }
 
 @media(max-width:768px){
-  .hero h2{
-    font-size:32px;
-  }
+  .hero h2{font-size:32px;}
 }
 </style>
 </head>
@@ -202,46 +128,44 @@ footer{
   <p>© 2026 Bella Vista Restaurant | 123 Main Street | (555) 123-4567</p>
 </footer>
 
-<!-- ✅ MENU DATA INSIDE HTML -->
 <script type="application/json" id="menu-data">
 {
   "items": [
     {
       "name": "Margherita Pizza",
-      "description": "Fresh mozzarella, basil & San Marzano tomato sauce.",
+      "description": "Fresh mozzarella, basil & tomato sauce.",
       "price": "$14",
-      "image": "https://images.unsplash.com/photo-1601924582975-3ecb2d8d0d5f?auto=format&fit=crop&w=800&q=80"
+      "image": "https://source.unsplash.com/800x600/?margherita-pizza"
     },
     {
       "name": "Fettuccine Alfredo",
       "description": "Creamy parmesan sauce with grilled chicken.",
       "price": "$18",
-      "image": "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?auto=format&fit=crop&w=800&q=80"
+      "image": "https://source.unsplash.com/800x600/?fettuccine-alfredo"
     },
     {
       "name": "Lasagna",
-      "description": "Layers of pasta, rich meat sauce & mozzarella.",
+      "description": "Layers of pasta, meat sauce & cheese.",
       "price": "$16",
-      "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=800&q=80"
+      "image": "https://source.unsplash.com/800x600/?lasagna"
     },
     {
       "name": "Bruschetta",
       "description": "Grilled bread with tomato, garlic & basil.",
       "price": "$8",
-      "image": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=800&q=80"
+      "image": "https://source.unsplash.com/800x600/?bruschetta"
     },
     {
       "name": "Tiramisu",
       "description": "Classic Italian coffee-flavored dessert.",
       "price": "$9",
-      "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80"
+      "image": "https://source.unsplash.com/800x600/?tiramisu"
     }
   ]
 }
 </script>
 
 <script>
-// Smooth scroll
 document.querySelectorAll("nav a").forEach(anchor=>{
   anchor.addEventListener("click",function(e){
     e.preventDefault();
@@ -250,24 +174,18 @@ document.querySelectorAll("nav a").forEach(anchor=>{
   });
 });
 
-// Load menu from embedded JSON
-const menuData = JSON.parse(
-  document.getElementById("menu-data").textContent
-);
-
+const menuData = JSON.parse(document.getElementById("menu-data").textContent);
 const container = document.getElementById("menu-container");
 
 menuData.items.forEach(item=>{
   const div=document.createElement("div");
   div.classList.add("menu-item");
-
   div.innerHTML=`
     <img src="${item.image}" alt="${item.name}">
     <h3>${item.name}</h3>
     <p>${item.description}</p>
     <p class="price">${item.price}</p>
   `;
-
   container.appendChild(div);
 });
 </script>
