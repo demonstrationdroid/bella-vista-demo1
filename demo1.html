@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bella Vista | Italian Restaurant</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #e63946;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #e63946;
+}
+
+.about, .menu, .contact {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item h3 {
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #e63946;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px;
+  background: #e63946;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #c92d3a;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #000;
+  margin-top: 50px;
+}
+
+@media(max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  header {
+    padding: 15px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Bella Vista</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Reserve</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Authentic Italian Cuisine in the Heart of the City</h2>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <div class="about">
+    <p>
+      Bella Vista brings traditional Italian flavors with a modern twist.
+      Our chefs use fresh, locally sourced ingredients to create unforgettable dining experiences.
+    </p>
+  </div>
+</section>
+
+<section id="menu">
+  <h2 class="section-title">Our Menu</h2>
+  <div class="menu menu-items">
+    <div class="menu-item">
+      <h3>Margherita Pizza</h3>
+      <p>Fresh mozzarella, basil & tomato sauce</p>
+      <p class="price">$14</p>
+    </div>
+    <div class="menu-item">
+      <h3>Fettuccine Alfredo</h3>
+      <p>Creamy parmesan sauce & grilled chicken</p>
+      <p class="price">$18</p>
+    </div>
+    <div class="menu-item">
+      <h3>Tiramisu</h3>
+      <p>Classic Italian coffee-flavored dessert</p>
+      <p class="price">$9</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Reserve a Table</h2>
+  <div class="contact">
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="date" required>
+      <textarea rows="4" placeholder="Special Requests"></textarea>
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Bella Vista Restaurant | 123 Main Street | (555) 123-4567</p>
+</footer>
+
+<script>
+document.querySelectorAll("nav a").forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
+</script>
+
+</body>
+</html>
